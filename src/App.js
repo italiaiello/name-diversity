@@ -28,15 +28,21 @@ const App = () => {
     if (tempFullName === '') return
     const nameForUrl = tempFullName.split(' ').join('%20')
     setFullName(nameForUrl)
+    setTempFullName('')
   }
 
   return (
     <div className="App">
-      <InputForm onSubmitName={onSubmitName} handleNameChange={handleNameChange} />
+      <h1>Name Diversity</h1>
+      <h2>Can the app correctly calculate your ethnicity?</h2>
+      <InputForm  onSubmitName={onSubmitName}
+                  handleNameChange={handleNameChange}
+                  tempFullName={tempFullName}
+      />
       <section className="dataDisplay">
         {
             isLoading ?
-            <h2>Loading name diveristy data...</h2>
+            <h3>Loading name diveristy data...</h3>
             :
             (
               !isEmpty(nameResult) &&

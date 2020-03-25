@@ -5,20 +5,36 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Montserrat;
 }
+
+h1, h2, h3 {
+  color: #a83232;
+}
+
+.dataDisplay {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Input Form */
 
 .inputForm {
   width: 50%;
   height: auto;
+  margin-top: 20px;
 }
 
 .inputForm form {
   margin: 0 auto;
-  width: 300px;
+  width: 70%;
   height: 50px;
   background-color: #a83232;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -44,6 +60,7 @@
   background: none;
   transition: all .2s ease-in-out;
   cursor: pointer;
+  outline: none;
 }
 
 .submitButton:hover {
@@ -54,11 +71,20 @@
   transform: scale(0.95, 0.95)
 }
 
-.dataDisplay {
-  width: 100%;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/* Diversity Display */
+
+.diversityInfo {
+  width: 30%;
+  height: auto;
+  background-color: #a65858;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.diversityInfo p {
+  margin: 16px auto;
+  width: 250px;
+  text-align: left;
+  color: white;
 }
 
