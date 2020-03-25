@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DiversityDisplay = props => {
+const DiversityDisplay = ({ nameResult }) => {
 
     const capFirstLetterOfEachWord = (words) => {
         const wordsToCapitalise = words.split(' ')
@@ -20,11 +20,11 @@ const DiversityDisplay = props => {
 
     return (
         <article className="diversityInfo">
-            <p>{`Fullname: ${capFirstLetterOfEachWord(props.nameResult.fullname)}`}</p>
-            <p>{`Gender: ${capFirstLetterOfEachWord(props.nameResult.gender)}`}</p>
-            <p>{`Gender Probability: ${configPercentage(props.nameResult['gender probability'])}`}</p>
-            <p>{`Ethinicity: ${capFirstLetterOfEachWord(props.nameResult.ethnicity)}`}</p>
-            <p>{`Ethinicity Probability: ${configPercentage(props.nameResult['ethnicity probability'])}`}</p>
+            <p>{`Fullname: ${capFirstLetterOfEachWord(nameResult.fullname)}`}</p>
+            <p>{`Gender: ${capFirstLetterOfEachWord(nameResult.gender)}`}</p>
+            <p>{`Gender Probability: ${configPercentage(nameResult['gender probability'])}`}</p>
+            <p>{`Ethinicity: ${capFirstLetterOfEachWord(nameResult.ethnicity)}`}</p>
+            <p>{`Ethinicity Probability: ${configPercentage(nameResult['ethnicity probability'])}`}</p>
         </article>
     )
 }

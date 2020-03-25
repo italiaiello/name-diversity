@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useDataFetch } from './hooks/displayNameData';
+import InputForm from './components/InputForm';
 import DiversityDisplay from './components/DiversityDisplay';
 
 import './App.css';
@@ -31,13 +32,8 @@ const App = () => {
 
   return (
     <div className="App">
-      <section>
-        <article>
-          <form onSubmit={onSubmitName}>
-            <input type="text" onChange={handleNameChange} placeholder="Enter your full name..." />
-            <button type="submit">Submit</button>
-          </form>
-        </article>
+      <InputForm onSubmitName={onSubmitName} handleNameChange={handleNameChange} />
+      <section className="dataDisplay">
         {
             isLoading ?
             <h2>Loading name diveristy data...</h2>
@@ -47,7 +43,6 @@ const App = () => {
               <DiversityDisplay nameResult={nameResult} />
             )
         }
-        
       </section>
     </div>
   );
